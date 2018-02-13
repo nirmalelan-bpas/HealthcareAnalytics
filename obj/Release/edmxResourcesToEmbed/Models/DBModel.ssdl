@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="healthcareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'healthcare.dbo.roles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="cst_first_name" />
+      <PropertyRef Name="cst_last_name" />
+    </Key>
+    <Property Name="cst_first_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cst_last_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cst_url_code" Type="nvarchar" MaxLength="100" />
+    <Property Name="cst_eml_address" Type="nvarchar" MaxLength="50" />
+    <Property Name="cst_web_login" Type="nvarchar" MaxLength="80" />
+    <Property Name="cst_web_password" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="healthcareModelStoreContainer">
+    <EntitySet Name="roles" EntityType="Self.roles" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [roles].[cst_first_name] AS [cst_first_name], 
+    [roles].[cst_last_name] AS [cst_last_name], 
+    [roles].[cst_url_code] AS [cst_url_code], 
+    [roles].[cst_eml_address] AS [cst_eml_address], 
+    [roles].[cst_web_login] AS [cst_web_login], 
+    [roles].[cst_web_password] AS [cst_web_password]
+    FROM [dbo].[roles] AS [roles]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

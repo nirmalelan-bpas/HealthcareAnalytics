@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="healthcareModelStoreContainer" CdmEntityContainer="healthcareEntities">
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="healthcareModel.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="cst_first_name" ColumnName="cst_first_name" />
+          <ScalarProperty Name="cst_last_name" ColumnName="cst_last_name" />
+          <ScalarProperty Name="cst_url_code" ColumnName="cst_url_code" />
+          <ScalarProperty Name="cst_eml_address" ColumnName="cst_eml_address" />
+          <ScalarProperty Name="cst_web_login" ColumnName="cst_web_login" />
+          <ScalarProperty Name="cst_web_password" ColumnName="cst_web_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
